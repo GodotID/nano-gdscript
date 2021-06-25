@@ -1,0 +1,6 @@
+#! /usr/bin/env sh
+echo "Installing requires sudo permission"
+echo "What we need:"
+echo " 1. Copy gdscript.nanorc to /usr/share/nano directory"
+sudo cp gdscript.nanorc /usr/share/nano
+echo "Done"

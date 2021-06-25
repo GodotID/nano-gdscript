@@ -1,0 +1,59 @@
+# GNU Nano Syntax Highlighter for GDScript (*.gd)
+# Contributors, please read CONTRIBUTING.md
+# otherwise your pull request would be closed
+syntax gdscript "\.gd$"
+
+comment "#"
+
+# Numbers
+color orange "\<[0-9]*\>"
+color orange "\<0x[0-9a-fA-F]*\>"
+
+# Function Calls
+color cyan "[_a-zA-Z]*[0-9]*\("
+
+# Operators
+color white "(\!|\%|\&|\*|\(|\)|\-|\+|\=|\{|\}|\[|\]|\/)"
+
+# Class
+color lightcyan "\<[A-Z]+[_a-zA-Z0-9]*\>"
+## Class Property
+color white "\.[_a-zA-Z]+[0-9]*"
+
+# Constants
+color white "\<[A-Z_]+\>"
+
+# Keywords
+## Conditions
+color bold,lightred "\<(if|elif|else|match|switch|case)\>"
+## Repeations
+color bold,lightred "\<(for|while|break|continue)\>"
+## Long-hand Operator
+color bold,lightred "\<(is|as|not|in|and|or)\>"
+## OOP
+color bold,lightred "\<(null|self|owner|parent|tool)\>"
+## Booleans
+color bold,lightred "\<(true|false)\>"
+## Statements
+color bold,lightred "\<(remote|master|puppet|remotesync|mastersync|puppetsync|sync)\>"
+color bold,lightred "\<(return|pass|static|const|enum|breakpoint|assert|onready)\>"
+color bold,lightred "\<(class_name|extends|var|export|setget|class|func|signal)\>"
+## Builtin Functions
+color bold,lightred "\<(print|funcref)\>"
+## Primitive Types
+color bold,lightred "\<(void|bool|int|float)\>"
+
+# Comment line
+color lightblack "^\s*#.*"
+
+# Strings
+color yellow "\".*\""
+
+# Child
+color green "\$[\"]?[_a-zA-Z]*[0-9]*[\"]?"
+
+# Misc
+## Task Marker
+color bold,lightcyan "^\s*#\s*(TODO|FIX|HACK|XXX|NOTE|BUG)"
+## Notices
+color bold,lightyellow "^\s*#\s*(WARNING|WARN|BUGGY)"
